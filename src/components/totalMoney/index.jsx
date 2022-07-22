@@ -1,0 +1,19 @@
+import "./style.css";
+import { useState } from "react";
+
+function TotalMoney({ listaTransacoes }) {
+  const dinheiroTotal = listaTransacoes.reduce((prev, curr) => {
+    return curr.type.toLowerCase() === "entrada" ? prev + curr.value : prev - curr.value;
+  }, 0);
+
+  return (
+    <div className="total-card">
+      <div className="total-linha">
+        <h3 className="total-titulo">Valor total:</h3>
+        <span className="total-dinheiro">$ {dinheiroTotal}</span>
+      </div>
+    </div>
+  );
+}
+
+export default TotalMoney;
