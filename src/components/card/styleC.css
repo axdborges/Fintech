@@ -1,0 +1,43 @@
+.card {
+    display: flex;
+    height: 87px;
+    justify-content: space-around;
+    gap: 10px;
+    align-items: center;
+    box-shadow: 0px 0px 10px 2px var(--cinza-2);
+    align-items: center;
+    align-content: center;
+}
+
+.titulo, .titulo-verde {
+    font-size: 18px;
+    align-self: center;
+}
+
+p {
+    color: var(--cinza-1);
+}
+
+.excluir-transacao {
+    height: 32px;
+    width: 32px;
+    left: 22px;
+    top: 0px;
+    border-radius: 2.461538553237915px;
+    background-color: var(--cinza-3);
+    color: black;
+}
+
+.excluir-transacao:hover {
+    background-color: var(--cinza-1);
+    color: white;
+}
+
+.valor-vermelho {
+    color: red;
+}
+
+.titulo-verde::before {
+    content: "";
+    border-left: solid 5px rgb(var(--verde));
+}

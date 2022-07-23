@@ -1,4 +1,4 @@
-import "./style.css"
+import "./styleLT.css"
 import { useState } from "react"
 import Card from "../card"
 import Filtros from "../filtros"

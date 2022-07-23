@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;800&display=swap');
+
+
+:root {
+
+    --rosa-1: 253, 55, 126;
+    --rosa-2: 227, 73, 129;
+
+    --verde: 3, 184, 152;
+
+    --cinza-1: #212529;
+    --cinza-2: #868E96;
+    --cinza-3: #E9ECEF;
+    --cinza-4: #F8F9FA;
+
+}

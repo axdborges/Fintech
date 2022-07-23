@@ -1,0 +1,34 @@
+@import '../../root.css';
+
+.filtros {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    width: 560px;
+    align-items: center;
+    margin-top: -30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.filtros-titulo h4 {
+    font-weight: 800;
+    font-size: 18px;
+}   
+
+.filtros-botoes {
+    display: flex;
+    gap: 15px;
+}
+
+.filtros-botoes button {
+    height: 40px;
+    width: 50%;
+    background-color: var(--cinza-3);
+    color: black;
+}
+
+.filtros-botoes button:hover {
+    background-color: rgb(var(--rosa-1));
+    color: white;
+}

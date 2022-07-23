@@ -1,4 +1,4 @@
-import "./style.css";
+import "./styleT.css";
 import { useState } from "react";
 
 function TotalMoney({ listaTransacoes }) {
@@ -12,6 +12,7 @@ function TotalMoney({ listaTransacoes }) {
         <h3 className="total-titulo">Valor total:</h3>
         <span className="total-dinheiro">$ {dinheiroTotal}</span>
       </div>
+      <p>O valor se refere ao saldo</p>
     </div>
   );
 }

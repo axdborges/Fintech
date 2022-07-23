@@ -1,4 +1,4 @@
-import "./style.css"
+import "./styleB.css"
 import {useState} from 'react'
 import Lista from "../list"
 
@@ -9,7 +9,8 @@ function Filtros ({listaTransacoes, setListaTransacoes}) {
         const filtrados = listaTransacoes.filter((elem) => {
             return elem.type == filtro
         })
-        setFiltro(filtro)
+        const atual = [...filtroAtual]
+        setListaTransacoes(filtrados)
     }
     
     return (
@@ -26,8 +27,7 @@ function Filtros ({listaTransacoes, setListaTransacoes}) {
             </div>
 
             <Lista listaTransacoes={listaTransacoes}
-            setListaTransacoes={setListaTransacoes}
-            filtro={filtroAtual}/>
+            setListaTransacoes={setListaTransacoes}/>
         </>
     )
 }

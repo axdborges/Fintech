@@ -1,5 +1,6 @@
-import "./style.css"
+import "./styleC.css"
 import { useState } from "react"
+import{FaTrashAlt} from 'react-icons/fa'
 
 function Card ({transacao , id, listaTransacoes, setListaTransacoes }) {
 
@@ -14,23 +15,25 @@ function Card ({transacao , id, listaTransacoes, setListaTransacoes }) {
 
   return (
     <div className="card" >
-      <h3 className="titulo">{transacao.description}</h3>
+      
         {
           transacao.type.toLowerCase() === "entrada" ? 
           <>  
-            <p className="descricao-verde">{transacao.type}</p>
-            <p className="valor">R$ {transacao.value},00</p>
+            <h3 className="titulo-verde">{transacao.description}</h3>
+            <p className="descricao">{transacao.type}</p>
+            <p className="valor">R${transacao.value},00</p>
           </>
           
             : 
           <>
-            <p className="descricao-cinza">{transacao.type}</p>
-            <p className="valor">R$ -{transacao.value},00</p>
+            <h3 className="titulo">{transacao.description}</h3>
+            <p className="descricao">{transacao.type}</p>
+            <p className="valor-vermelho">R$ -{transacao.value},00</p>
           </>
           
         }
       
-      <button className="excluir-transacao" onClick={() => filtra()}>Excluir</button>
+      <button className="excluir-transacao" onClick={() => filtra()}><FaTrashAlt/></button>
     </div>  
   )
 }
