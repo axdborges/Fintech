@@ -12,9 +12,9 @@ function Form ({listaTransacoes, setListaTransacoes}) {
         <div className="pai-form">
             <form className="box-form" action="" onSubmit={(e) => {e.preventDefault()}}>
                 <label htmlFor="">Descrição</label>
-                <input type="text" className="input-descricao" placeholder="descricao" value={valorInput2} onChange={(e) => setValorInput2(e.target.value)} />
+                <input type="text" className="input-descricao" required={true} placeholder="descricao" value={valorInput2} onChange={(e) => setValorInput2(e.target.value)} />
                 <label htmlFor="">Valor</label> 
-                <input type="text"  className="input-valor" placeholder="valor" value={valorInput} onChange={(e) => setValorInput(e.target.value)}/>
+                <input type="number"  className="input-valor" required={true} placeholder="valor" value={valorInput} onChange={(e) => setValorInput(e.target.value)}/>
                 <label htmlFor="">Tipo</label> 
                 <select name="" id="" value={valorOption} onChange={(e) => setValorOption(e.target.value)}>
                     <option >Entrada</option>
@@ -22,10 +22,13 @@ function Form ({listaTransacoes, setListaTransacoes}) {
                 </select>
                 
                 <button onClick={() => 
-                    {return setListaTransacoes([...listaTransacoes, { 
-                     description: valorInput2,
-                     type: valorOption.toLowerCase(), value: parseInt(valorInput) }
-                    ])}}>Inserir Valor</button>
+                    {   if(valorInput && valorInput2 !== ""){
+                        return setListaTransacoes([...listaTransacoes, { 
+                            description: valorInput2,
+                            type: valorOption.toLowerCase(), value: parseInt(valorInput) }
+                        ])}}
+                    }
+                        >Inserir Valor</button>
             </form>
         </div>
     )

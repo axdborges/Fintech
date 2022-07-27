@@ -86,3 +86,21 @@ form button {
     height: 42px;
 
 }
+
+@media screen and (max-width: 900px) {
+
+    .pai-form {
+        height: 300px;
+        max-width: 90%;
+        left: 258px;
+        top: 127px;
+        border-radius: 4px;
+        box-shadow: 0px 0px 10px 5px var(--cinza-2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 10px;
+    }
+
+
+}

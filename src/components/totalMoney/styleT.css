@@ -26,3 +26,16 @@
     margin-left: 15px;
     color: var(--cinza-1)
 }
+
+@media screen and (max-width: 900px) {
+
+    .total-card {
+        height: 82px;
+        max-width: 338px;
+        left: 258px;
+        top: 494px;
+        padding: 10px;
+        border-radius: 4px;
+        box-shadow: 0px 0px 10px 5px var(--cinza-2);
+    }
+}

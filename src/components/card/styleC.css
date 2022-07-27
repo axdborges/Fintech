@@ -41,3 +41,11 @@ p {
     content: "";
     border-left: solid 5px rgb(var(--verde));
 }
+
+@media screen and (max-width: 900px) {
+    .card {
+        width: 90%;
+        margin-left: 20px;
+        padding: 1px;
+    }
+}

@@ -2,13 +2,22 @@ import "./styleC.css"
 import { useState } from "react"
 import{FaTrashAlt} from 'react-icons/fa'
 
-function Card ({transacao , id, listaTransacoes, setListaTransacoes }) {
-
+function Card ({transacao , id, listaTransacoes, setListaTransacoes , filtrado}) {
   const filtra = () => {
-    const filtrados = listaTransacoes.filter((elem, index) => {
-      return index !== id
-    })
-    setListaTransacoes(filtrados)
+    if(filtrado === undefined) {
+      const filtrados = listaTransacoes.filter((elem, index) => {
+        return index !== id
+      })
+      setListaTransacoes(filtrados)
+    } else {
+      const achado = filtrado.find((elem, index) => {
+        return index === id
+      })
+      const indexAchado = listaTransacoes.indexOf(achado)
+      const arrayNovo = [...listaTransacoes]
+      setListaTransacoes(arrayNovo.splice(indexAchado, 1,))
+    }
+    
   }
 
 

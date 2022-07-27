@@ -4,13 +4,15 @@ import Lista from "../list"
 
 function Filtros ({listaTransacoes, setListaTransacoes}) {
     
-    const [filtroAtual, setFiltro] = useState("todos")
+    const [filtroAtual, setFiltro] = useState([])
     const filtrar = (filtro) => {
         const filtrados = listaTransacoes.filter((elem) => {
-            return elem.type == filtro
+            return elem.type === filtro
         })
-        const atual = [...filtroAtual]
-        setListaTransacoes(filtrados)
+        if(filtro === "todos") {setFiltro([...listaTransacoes])}
+        else if (filtro === "entrada") {setFiltro([...filtrados])}
+        else if (filtro === "saida") {setFiltro([...filtrados])}
+
     }
     
     return (
@@ -27,7 +29,8 @@ function Filtros ({listaTransacoes, setListaTransacoes}) {
             </div>
 
             <Lista listaTransacoes={listaTransacoes}
-            setListaTransacoes={setListaTransacoes}/>
+            setListaTransacoes={setListaTransacoes}
+            filtrado={filtroAtual}/>
         </>
     )
 }

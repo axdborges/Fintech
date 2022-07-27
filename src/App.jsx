@@ -11,10 +11,7 @@ import Filtros from './components/filtros';
 
 function App() {
 
-  const [listaTransacoes, setListaTransacoes ] = useState([
-    { description: "Salário recebido", type: "entrada", value: 2500 },
-    { description: "Conta de luz", type: "saida", value: 150 }
-  ])
+  const [listaTransacoes, setListaTransacoes ] = useState([])
 
   const [ estadoBotao, setEstadoBotao ] = useState(false)
 
